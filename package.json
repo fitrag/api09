@@ -1,0 +1,21 @@
+{
+  "name": "api09",
+  "version": "1.0.0",
+  "description": "Kumpulan api keren keren",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "api",
+    "keren"
+  ],
+  "author": "Fadila Fitra Kusuma Jaya",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
