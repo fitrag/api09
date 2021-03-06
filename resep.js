@@ -19,8 +19,10 @@ router.get('/resep/:page', (req,res) => {
                 let judul = $(el).find(".awr > .entry-title").find("a").text()
                 let slug = $(el).find(".awr > .entry-title").find("a").attr("href").replace("https://resepkoki.co/","").replace("/","")
                 let capt = $(el).find(".awr").find("p").text().trim()
+                let count = id
                 let img = $(el).find(".fwit").css("background-image").replace("url('","").replace("')","");
                 resep.push({
+                    count,
                     judul,
                     img,
                     capt,
