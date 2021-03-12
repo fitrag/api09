@@ -130,13 +130,16 @@ router.get('/apk_mod/link/:slug', (req, res) => {
             const content = $(".row")
 
             const obj = {}
+            let link = []
 
-            content.find("#primary").each((id, el) => {
-                obj.link_pertama = $(el).find("#accordion-downloads > div.mb-3:first-child > .collapse > a").attr("href").replace("https://moddroid.com/download/","")
-                obj.link_kedua = $(el).find("#accordion-downloads > div.mb-3:nth-child(2) > .collapse > a").attr("href").replace("https://moddroid.com/download/","")
+            content.find("#primary > #accordion-downloads > div.mb-3").each((id, el) => {
+                let link_download = $(el).find(".collapse > .btn-secondary").attr("href").replace("https://moddroid.com/download/","")
+                link.push({
+                    link_download
+                })
             })
 
-            res.json(obj)
+            res.json(link)
         })
 
     }catch{
