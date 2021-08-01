@@ -7,6 +7,8 @@ const berita = require('./berita')
 const insidelearn = require('./learn.js')
 const resep = require('./resep')
 const apk = require('./apk')
+const wallpaper = require("./wallpaper");
+
 
 app.use(cors())
 
@@ -14,6 +16,8 @@ app.use("/api", berita)
 app.use("/api", insidelearn)
 app.use("/api", resep)
 app.use("/api", apk)
+app.use("/api", wallpaper);
+
 
 app.listen(PORT, () => {
     console.log("Server running " + PORT)
