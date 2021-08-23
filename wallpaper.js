@@ -22,7 +22,7 @@ router.get("/wallpaper/:page", (req, res) => {
           .attr("href")
           .replace("https://3dandroidwallpaper.com/", "")
           .replace("/", "");
-        const img = $(el).find(".thumbnails > a > img").attr("src");
+        const img = $(el).find(".thumbnails > a > img").attr("src").replace("https", "http");
         const judul = $(el).find(".text-center > h2 > a").text().trim();
         const reso = $(el)
           .find(".text-center > .meta > .fa-desktop")
